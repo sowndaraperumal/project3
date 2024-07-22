@@ -35,11 +35,27 @@ function hidePanel() {
   contents.forEach(function (content) {
     content.classList.remove("show");
   });
+  titles.forEach(function (title) {
+    title.getElementsByClassName('minusicon')[0].classList.remove("open");
+    title.getElementsByClassName('plusicon')[0].classList.add("open");
+    title.style.background = "#f3f3f3";
+    title.closest('.accordion').style.background = "#f3f3f3";
+
+  })
 }
 
 titles.forEach(function (title) {
   title.addEventListener("click", function () {
+    if (!title.nextElementSibling.classList.contains('show')) {
     hidePanel();
-    title.nextElementSibling.classList.add("show");
+    
+      title.nextElementSibling.classList.add("show");
+      title.style.background = ' #b9ff66';
+      title.closest('.accordion').style.background = ' #b9ff66';
+      title.getElementsByClassName('minusicon')[0].classList.add("open");
+      title.getElementsByClassName('plusicon')[0].classList.remove("open");
+    }else{
+      hidePanel();
+    }
   });
 });

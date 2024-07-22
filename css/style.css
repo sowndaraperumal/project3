@@ -107,7 +107,7 @@ a {
 }
 
 .service-card {
-  width: 40%;
+  width: 45%;
   margin: 10px;
   min-width: 400px;
   border: 1px solid #000000;
@@ -168,6 +168,7 @@ a {
 .learnmore {
   display: flex;
   justify-content: flex-end;
+  
 }
 
 .arrowicon {
@@ -181,9 +182,8 @@ a {
   font-weight: 500;
   margin-top: 0px;
   margin-bottom: 50px;
-  width: 55%;
   color: #000000;
-  justify-content: center;
+  display: inline;
   border-radius: 5px;
   padding: 2px;
 }
@@ -366,6 +366,11 @@ input[type="Email"] {
   width: 100%;
   height: 50px;
 }
+
+.form-group  input[type="radio"]:checked {
+  background-color: #4CAF50; /* Change background color when checked */
+  border-color: #4CAF50; /* Change border color when checked */
+}
 /* footer block */
 #footer-block .menu {
   display: block;
@@ -375,7 +380,7 @@ input[type="Email"] {
   list-style-type: none;
   flex-direction: column !important;
   display: flex;
-  height: 150px;
+
 }
 
 #footer-block .menu-list {
@@ -512,8 +517,10 @@ input[type="Email"] {
 
 .scnd-heading {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 .scnd-heading-title {
@@ -525,62 +532,10 @@ input[type="Email"] {
   border-radius: 5px;
   padding: 2px;
 }
-
-.second-heading-title {
-  width: 20%;
+.second-heading-desc{
+  margin-top: 20px;
 }
 
-.second-heading-desc {
-  width: 45%;
-}
-
-.cta-content-title {
-  margin-bottom: 0px;
-}
-
-.cta-content-desc {
-  width: 50%;
-}
-
-.working-heading-title {
-  width: 40%;
-}
-
-.working-heading-desc {
-  width: 65%;
-}
-
-.case-heading-title {
-  width: 25%;
-}
-
-.case-heading-desc {
-  width: 65%;
-}
-
-.team-heading-title {
-  width: 10%;
-}
-
-.team-heading-desc {
-  width: 65%;
-}
-
-.Testimonials-heading-title {
-  width: 30%;
-}
-
-.Testimonials-heading-desc {
-  width: 65%;
-}
-
-.ContactUs-heading-title {
-  width: 25%;
-}
-
-.ContactUs-heading-desc {
-  width: 65%;
-}
 
 /*  */
 
@@ -668,6 +623,7 @@ input[type="Email"] {
 .accordion-container {
   width: 100%;
   margin: 60px 20px;
+
 }
 .accordion {
   border: 1px solid #ccc;
@@ -675,12 +631,14 @@ input[type="Email"] {
   margin-top: 20px;
   padding: 20px;
   border-bottom: 4px solid #000;
+  
 }
 .accordion-container .title {
   font-size: 20px;
   padding: 10px;
   cursor: pointer;
   display: flex;
+  position: relative;
 }
 
 .accordion-container .content {
@@ -691,7 +649,77 @@ input[type="Email"] {
 .accordion-container .content.show {
   display: block;
 }
+.plusicon{
+  position: absolute;
+    right: 10px;
+}
+.minusicon{
+  position: absolute;
+    right: 10px;
+}
+.minusicon.open{
+ display: block;
+}
+.plusicon.open{
+  display: block;
+
+}
+.minusicon{
+  display: none;
+ }
+ .plusicon{
+   display: none;
+   
+ }
+ .accordion-subheading{
+  margin: 8px;
+  padding-left: 10px;
+  font-weight: 400;
+ }
 /* ed of accordon */
+
+
+
+#case-studies-block {
+  margin-top: 30px;
+  border: 1px solid #191a23;
+  background-color: #191a23;
+  padding: 30px;
+  border-radius: 10px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+}
+
+#case-studies-block a {
+  color: #b9ff66;
+}
+
+#case-studies-content {
+ 
+  
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+#vline {
+  border-top: 1px solid #ffffff;
+    padding-top: 20px;
+}
+
+.case-studies-img {
+  height: 20px;
+  width: 20px;
+}
+
+#learnmore {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+
+
 /* mobiles/tablets */
 @media screen and (min-width: 567px) {
 }
@@ -730,7 +758,7 @@ input[type="Email"] {
   }
 
   h5 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 28px;
   }
@@ -842,45 +870,7 @@ input[type="Email"] {
     justify-content: space-around;
   }
 
-  #case-studies-block {
-    margin-top: 30px;
-    border: 1px solid #191a23;
-    background-color: #191a23;
-    padding: 30px;
-    border-radius: 10px;
-    color: #f3f3f3;
-    display: flex;
-    flex-direction: row;
-  }
-
-  #case-studies-block a {
-    color: #b9ff66;
-  }
-
-  #case-studies-content {
-    text-align: left;
-    width: 50%;
-    font-weight: 400;
-    font-size: 0.75rem;
-  }
-
-  #vline {
-    border-right: 1px solid #ffffff;
-    padding-right: 20px;
-    margin-right: 40px;
-  }
-
-  .case-studies-img {
-    height: 20px;
-    width: 20px;
-  }
-
-  #learnmore {
-    display: flex;
-    justify-content: baseline;
-    padding-top: 10px;
-  }
-
+ 
   .headingthirdimg {
     display: block;
     padding-left: 60px;
@@ -926,13 +916,12 @@ input[type="Email"] {
   }
   /* second heading title css */
   .scnd-heading {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
     margin-top: 40px;
   }
 
   .scnd-heading-title {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     background-color: #b9ff66;
     color: #000000;
@@ -940,55 +929,11 @@ input[type="Email"] {
     border-radius: 5px;
     padding: 2px;
   }
-
-  .second-heading-title {
-    width: 13%;
+  .second-heading-desc{
+    display: inline-block;
   }
 
-  .second-heading-desc {
-    width: 45%;
-  }
-
-  .working-heading-title {
-    width: 25%;
-  }
-
-  .working-heading-desc {
-    width: 65%;
-  }
-
-  .case-heading-title {
-    width: 18%;
-  }
-
-  .case-heading-desc {
-    width: 65%;
-  }
-
-  .team-heading-title {
-    width: 7%;
-  }
-
-  .team-heading-desc {
-    width: 65%;
-  }
-
-  .Testimonials-heading-title {
-    width: 18%;
-  }
-
-  .Testimonials-heading-desc {
-    width: 65%;
-  }
-
-  .ContactUs-heading-title {
-    width: 15%;
-  }
-
-  .ContactUs-heading-desc {
-    width: 65%;
-  }
-
+  
   /*  */
 
   /* footer block */
@@ -1110,4 +1055,44 @@ input[type="Email"] {
   }
 
   /* end of footer block */
+
+  #case-studies-block {
+    margin-top: 30px;
+    border: 1px solid #191a23;
+    background-color: #191a23;
+    padding: 30px;
+    border-radius: 10px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #case-studies-block a {
+    color: #b9ff66;
+  }
+
+  #case-studies-content {
+    text-align: left;
+    width: 50%;
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+
+  #vline {
+    border-top:0px;
+    border-right: 1px solid #ffffff;
+    padding-right: 20px;
+    margin-right: 40px;
+  }
+
+  .case-studies-img {
+    height: 20px;
+    width: 20px;
+  }
+
+  #learnmore {
+    display: flex;
+    justify-content: baseline;
+    padding-top: 10px;
+  }
 }
